@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles/layout.css" rel="stylesheet" type="text/css">
+    <link href="styles/base.css" rel="stylesheet" type="text/css">
+    <link href="styles/module.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <%- include('../../layout/header')%>
+
+
+   <main>
+       <h1>Search Results</h1>
+       <ul>
+       <%bookData.forEach(val=>{%>
+        <li>
+       
+        <img class="bookImg"src="<%=val.image%>">
+        <h4 class="bookTit"><%=val.title%></h4>
+        <h5 class="bookAuthor"><%=val.authors%></h5>
+        <p class="descrip"><%=val.description%></p>
+       
+               <form class="addform" action="/books" method="POST"><br>
+            <input type="hidden" name="title" class="bookTit"  value="<%=val.title%>" > <br>
+            <input type="hidden" name="author" class ="bookAuthor"  value="<%=val.authors%>"><br>
+            <input type="hidden" name="isbn" value="<%=val.isbn%>"> <br>
+            <input type="hidden" name="image_url" class="bookImg"  value="<%=val.image%>"> <br>
+            <input type="hidden" name="description"class="descrip" value="<%=val.description%>"> <br>
+            <button >Select the book</button>
+        </form>
+    </li>
+            <%})%>
+        </ul>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="/app.js"></script>
+   </main> 
+</body>
+</html>

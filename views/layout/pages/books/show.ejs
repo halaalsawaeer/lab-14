@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="styles/layout.css" rel="stylesheet" type="text/css">
+    <link href="styles/base.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+   
+    <%- include('../../layout/header')%>
+    <main>
+
+        <h1>Search Results</h1>
+
+        <img class="bookImg" src="<%=books.image_url%>">
+        <h2 class="bookTit"><%=books.title%></h2>
+        <h3  class="bookAuthor" ><%=books.author%></h3>
+        <h6><%=books.isbn%></h6>
+        <p class="descrip" ><%=books.description%></p>
+
+        <form action="/deleteBook/<%= books.id%>?_method=delete" method="POST">
+            <button>Delete Book</button>
+        </form>
+
+        <button id='updateBtn'>Update</button>
+        <section id="updateForm">
+            <form action="/updateBooks/<%= books.id%>?_method=put" method="POST">
+                <input type="text" name="title" value="<%=books.title%>">
+                <input type="text" name="author" value="<%=books.author%>">
+                <input type="text" name="isbn" value="<%=books.isbn%>">
+                <textarea name="description" id="" cols="30" rows="10"><%=books.description%></textarea>
+                <button>Update Book</button>
+            </form>
+        </section>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="/app.js"></script>
+    </main>
+</body>
+
+</html>

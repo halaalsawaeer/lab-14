@@ -1,0 +1,127 @@
+#mainBook{
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    background-color: #b4bb76;
+}
+#bookM{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2%;
+   border: 3px solid #fe9801;
+   border-radius: 4px;
+   flex-direction: row;
+   justify-content: center;
+}
+h1{
+    text-align: center;
+    color: #697c37;
+
+}
+
+.bookTit{
+    background-color: #f4eec7;
+    color: #697c37;
+    padding: 10px;
+    text-align: center;
+}
+.bookImg{
+    width: 50%;
+    margin: 20px auto 0;
+    outline: #697c37 solid 5px;
+}
+.bookAuthor {
+    color: #fe9801;
+    font-size: 15px;
+    padding: 1px 0;
+}
+.descrip {
+
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 13px;
+}
+
+
+@media (min-width: 320px) and (max-width: 780px){
+    ul {
+        width: 100%;
+        padding: 8%;
+        margin: 4%;
+    }   
+
+}
+
+button{
+    color: #697c37;
+    background-color: #fe9801;
+}
+
+
+.addform{
+    padding-left: 15%;
+}
+
+.bookImg{
+    width: 50%;
+    margin: 20px auto 0;
+}
+
+#search{
+    justify-content: center;
+    margin-left: 40%;
+    margin-top: 20%;
+}
+
+#links{
+    padding-left: 10px;
+    color: blanchedalmond;
+    float: left;
+}
+
+
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: #697c37;
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #fe9801;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #b4bb76;
+    color: #697c37;
+  }
+
+/*  */

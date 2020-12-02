@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles/layout.css" rel="stylesheet" type="text/css">
+    <link href="styles/base.css" rel="stylesheet" type="text/css">
+    <link href="styles/module.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <%- include('../../layout/header')%>
+
+    <main>
+        <h3>Search by Title or Author</h3>
+
+        <section>
+            <form  id="search" action="/searches" method="POST">
+                <input type="text" name="bookname" placeholder="Please enter a Title or author">
+                <br>
+              
+                    <label for="title">Title</label>
+                    <input type="radio" name="myBook" value="title">
+    
+                    <label for="author">Author</label>
+                    <input type="radio" name="myBook" value="author">
+              
+            
+                    <button>Search For Your Book</button>
+              
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
